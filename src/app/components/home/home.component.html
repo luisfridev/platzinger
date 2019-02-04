@@ -2,9 +2,11 @@
 <b>Amigos</b>
 <br>
 <ng-container *ngFor="let user of friends; let i = index">
-  <p *ngIf="user.friend ==  true">
-    {{ i }} - {{ user.nick }} - {{ user.email }}
-  </p>
+  <div *ngIf="user.friend ==  true">
+    <a routerLink="/conversation/{{ user.uid }}">
+      {{ i }} - {{ user.nick }} - {{ user.email }}
+    </a>
+  </div>
 </ng-container>
 <br>
 <b>No agregados</b>
