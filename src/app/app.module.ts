@@ -21,6 +21,6 @@ import { ConversationComponent } from './components/conversation/conversation.co
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [LoginComponent]
 })
 export class AppModule { }
