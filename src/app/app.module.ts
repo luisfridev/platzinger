@@ -18,9 +18,9 @@ import { ConversationComponent } from './components/conversation/conversation.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [LoginComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
