@@ -13,10 +13,13 @@ export class ConversationComponent implements OnInit {
   friend: User;
   friends: User[];
   price: number;
+  today: any;
     constructor(private _activatedRoute: ActivatedRoute,
         private userService: UserService) {
         this.friendId = this._activatedRoute.snapshot.params['uid'];
         this.friend = this.userService.getFriend(this.friendId);
+        this.price = 89.12312312312344;
+        this.today = Date.now();
         console.log(this.friend);
   }
 
