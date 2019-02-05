@@ -9,6 +9,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ConversationComponent } from './components/conversation/conversation.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SearchPipe } from './pipes/search.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SearchPipe } from './pipes/search.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
