@@ -51,4 +51,10 @@ export class UserService {
     getFriends() {
         return this.friends;
     }
+
+    getFriend(id: any) {
+        return this.friends.find( (record) => {
+            return record.uid == id;
+        })
+    }
 }

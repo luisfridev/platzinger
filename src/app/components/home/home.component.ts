@@ -10,8 +10,8 @@ import { User } from 'src/app/interfaces/user';
 })
 export class HomeComponent implements OnInit {
     friends: User[];
-    constructor(private service: UserService) {
-        this.friends = this.service.getFriends();
+    constructor(private userService: UserService) {
+        this.friends = this.userService.getFriends();
     }
 
   ngOnInit() {
