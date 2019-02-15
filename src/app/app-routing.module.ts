@@ -6,11 +6,12 @@ import { ConversationComponent } from './components/conversation/conversation.co
 import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
-    {path: 'home', component: HomeComponent},
-    {path: 'login', component: LoginComponent},
-    { path: 'conversation', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'conversation/:uid', component: ConversationComponent},
-    {path: 'profile', component: ProfileComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'conversation', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'conversation/:uid', component: ConversationComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
