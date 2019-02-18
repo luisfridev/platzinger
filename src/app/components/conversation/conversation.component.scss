@@ -16,7 +16,33 @@
   width:100%;
 }
 
-.my-messages {
+.messages{
+  .bubble{
+    color: #fefefe;
+    display: inline;
+    position: relative;
+    padding: 5px;
+    border-radius: .4em;
+  }
+  .friend, .me{
+    margin-bottom: 10px;
+  }
+  .friend{
+    .bubble{
+      background: #00a8fb;
+
+    }
+  }
+  .me{
+    text-align: right;
+    .bubble{
+      background: #4b82d4;
+    }
+  }
+}
+
+
+.message-input {
   background: #fefefe;
   border: 1px solid #45B7ED;
   display: inline-block;
