@@ -1,9 +1,40 @@
-<p>
-  {{ friend | json }}
-</p>
-<p>
-  {{ price | number: '1.2-2' }}
-</p>
-<p>
-  {{ today | date:'fullDate' }}
-</p>
+<div id="conversationContainer">
+  <div class="container pato45">
+    <!-- Friend messages -->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="avatarFrameOnline">
+          <img src="assets/img/generic_avatar.png" class="avatarImage img-fluid" alt="">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="chat-container">
+          <div class="friend-data">
+            <b>{{ friend.nick }} ({{ friend.status }})</b>
+          </div>
+          <hr>
+          <div class="friend-messages">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- My messages -->
+    <div class="row">
+      <div class="col-md-3">
+        <div class="avatarFrameOnline">
+          <img src="assets/img/generic_avatar.png" class="avatarImage img-fluid" alt="">
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="chat-container">
+          <div class="my-messages">
+
+          </div>
+          <div>
+            <button class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

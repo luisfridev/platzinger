@@ -1,0 +1,25 @@
+#conversationContainer {
+  background-image: url('/assets/img/msnbg_tall.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.chat-container {
+  padding: 15px;
+}
+
+.friend-messages{
+  background: #fefefe;
+  border: 1px solid #45B7ED;
+  display: inline-block;
+  height: 300px;
+  width:100%;
+}
+
+.my-messages {
+  background: #fefefe;
+  border: 1px solid #45B7ED;
+  display: inline-block;
+  height: 150px;
+  width:100%;
+}
