@@ -5,12 +5,12 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'AIzaSyCVvHzTo7RpzPcLkSa_4kiRBwPPx_2V8Pw',
-    authDomain: 'platzinger-65f9f.firebaseapp.com',
-    databaseURL: 'https://platzinger-65f9f.firebaseio.com',
-    projectId: 'platzinger-65f9f',
-    storageBucket: 'platzinger-65f9f.appspot.com',
-    messagingSenderId: '981652375359'
+    apiKey: 'AIzaSyBVsTEf7_CALUA8hwaqCIWM5stPOlfU_zQ',
+    authDomain: 'platzinger-e6c06.firebaseapp.com',
+    databaseURL: 'https://platzinger-e6c06.firebaseio.com',
+    projectId: 'platzinger-e6c06',
+    storageBucket: 'platzinger-e6c06.appspot.com',
+    messagingSenderId: '1063779735187'
   }
 };
 
