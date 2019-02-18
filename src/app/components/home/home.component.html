@@ -13,7 +13,7 @@
             <span>Online</span>
             <br />
             <span>
-              < Escribe un mensaje personal>
+              < Escribe un mensaje personal >
             </span>
           </div>
         </div>
@@ -23,17 +23,22 @@
 
   <div class="whiteContainerPadded marto15">
     <div class="row">
-
+      <div class="col">
+        <input class="form-control" type="text" name="Buscar amigo" [(ngModel)]="query" />
+      </div>
+      <div class="col-md-auto">
+        <img src="assets/img/logo_live_add.png" alt="" class="icon">
+      </div>
     </div>
-    <input type="text" name="Buscar amigo" [(ngModel)]="query" />
-    <br>
-    <b>Amigos</b>
+    <hr>
+    <b>Amigos  ({{ friends.length }} / {{ friends.length }}) </b>
     <br>
     <ng-container *ngFor="let user of friends | search: query; let i = index">
       <div>
-        <a routerLink="/conversation/{{ user.uid }}">
+        <a routerLink="/conversation/{{ user.uid }}" class="disblo marbo5">
           <img id="user-status" src="/assets/img/logo_live_{{ user.status }}.png" alt="">
-          {{ i }} - {{ user.nick }} - {{ user.email }}
+          <b>{{ user.nick }}</b> - {{ user.subnick || 'No subnick '}}
+          <small>{{ user.email }}</small>
         </a>
       </div>
     </ng-container>
