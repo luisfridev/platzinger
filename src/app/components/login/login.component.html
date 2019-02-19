@@ -19,6 +19,7 @@
         </div>
         <div class="center marto15 marto15 login">
           <button (click)="login()" *ngIf="operation == 'login' " href="" class="btn btn-default">Iniciar sesión</button>
+          <button (click)="loginSocial()" *ngIf="operation == 'login' " href="" class="btn btn-default">Login con facebook</button>
           <button (click)="register()" *ngIf="operation == 'register' " href="" class="btn btn-default">Registrarme</button>
         </div>
         <div class="center">
