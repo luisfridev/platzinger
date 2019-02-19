@@ -1,65 +1,26 @@
 import { Injectable } from '@angular/core';
 import { User } from 'src/app/interfaces/user';
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
     public friends: User[];
-    constructor() { 
-        let usuario1: User = {
-            nick: 'Eduardo',
-            age: 24,
-            email: 'ed@aoe.aoe',
-            friend: true,
-            uid: 1,
-            status: 'online'
-        };
-        let usuario2: User = {
-            nick: 'Freddy',
-            age: 28,
-            email: 'fred@aoe.aoe',
-            friend: true,
-            uid: 2,
-            status: 'offline'
-        };
-        let usuario3: User = {
-            nick: 'Yuliana',
-            age: 18,
-            email: 'yuli@aoe.aoe',
-            friend: true,
-            uid: 3,
-            status: 'busy'
-        };
-        let usuario4: User = {
-            nick: 'Ricardo',
-            age: 17,
-            email: 'rick@aoe.aoe',
-            friend: false,
-            uid: 4,
-            status: 'away'
-        };
-        let usuario5: User = {
-            nick: 'Marcos',
-            age: 30,
-            email: 'marcos@aoe.aoe',
-            friend: false,
-            uid: 5,
-            status: 'offline'
-        };
+    constructor(
+      private angularFireDatabase: AngularFireDatabase,
+    ) {}
 
-        this.friends = [
-            usuario1, usuario2, usuario3, usuario4, usuario5
-        ];
+    getUsers() {
+      return this.angularFireDatabase.list('/users');
     }
-
-    getFriends() {
-        return this.friends;
+    getUserById(uid) {
+      return this.angularFireDatabase.object('/users/' + uid);
     }
-
-    getFriend(id: any) {
-        return this.friends.find( (record) => {
-            return record.uid == id;
-        })
+    createUser(user) {
+      return this.angularFireDatabase.object('/users/' + user.uid).set(user);
+    }
+    editUser(user) {
+      return this.angularFireDatabase.object('/users/' + user.uid).set(user);
     }
 }

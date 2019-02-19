@@ -9,18 +9,20 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./conversation.component.scss']
 })
 export class ConversationComponent implements OnInit {
-  friendId: any;
-  friend: User;
-  friends: User[];
-  price: number;
-  today: any;
+  public friendId: any;
+  public friend: User;
     constructor(private _activatedRoute: ActivatedRoute,
         private userService: UserService) {
         this.friendId = this._activatedRoute.snapshot.params['uid'];
-        this.friend = this.userService.getFriend(this.friendId);
-        this.price = 89.12312312312344;
-        this.today = Date.now();
         console.log(this.friend);
+        this.userService.getUserById(this.friendId).valueChanges().subscribe(
+          (data: User) => {
+            this.friend = data;
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
   }
 
   ngOnInit() {

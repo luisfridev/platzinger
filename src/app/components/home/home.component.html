@@ -31,7 +31,7 @@
       </div>
     </div>
     <hr>
-    <b>Amigos  ({{ friends.length }} / {{ friends.length }}) </b>
+    <b *ngIf="friends">Amigos  ({{ friends.length }} / {{ friends.length }}) </b>
     <br>
     <ng-container *ngFor="let user of friends | search: query; let i = index">
       <div>
